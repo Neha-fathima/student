@@ -1,0 +1,28 @@
+struct Student {
+    name: String,
+    email: String,
+    phone: String,
+    id: u32,
+}
+
+fn main() {
+    let students = vec![
+        Student {
+            name: String::from("Alice"),
+            email: String::from("alice@example.com"),
+            phone: String::from("123-456-7890"),
+            id: 1,
+        },
+        Student {
+            name: String::from("Bob"),
+            email: String::from("bob@example.com"),
+            phone: String::from("987-654-3210"),
+            id: 2,
+        },
+     
+    ];
+
+    
+    match get_student_by_index(&students, 1) {
+        Ok(student) => {
+            println!("Student name: {}", student.name);
